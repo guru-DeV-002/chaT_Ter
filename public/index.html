@@ -6,5 +6,16 @@
   </head>
   <body>
     <h1>This is the chatter nigga !!</h1>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var socket = io();
+      socket.on('connect', () => {
+        console.log('Connected to server');
+      });
+      socket.on('disconnect', () => {
+        console.log('Disconnected from server');
+      });
+
+    </script>
   </body>
 </html>
